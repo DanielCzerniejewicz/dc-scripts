@@ -1,4 +1,3 @@
-# dc-scripts
-Scripts for FiveM RolePlay
-Change branch
-[GitHub Pages](https://pages.github.com/)
+#DC-Scripts Change Branch
+##All Scripts are in Polish Language change it yourself!
+[dc-inventory]((https://github.com/DanielCzerniejewicz/dc-scripts/tree/dc-inventory))
