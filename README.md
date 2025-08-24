@@ -1,3 +1,3 @@
 # dc-scripts
-Scripts for FiveM RolePlay
-Change branch
+## Simple inventory
+### No need to use any of my scripts for it to work
