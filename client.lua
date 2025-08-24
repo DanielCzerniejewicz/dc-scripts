@@ -1,7 +1,7 @@
 local inventory = {}
 local open = false
 
--- mapa broni GTA V -> polska nazwa
+-- Translate it!!!
 local weaponLabels = {
     WEAPON_KNIFE = "Nóż",
     WEAPON_BAT = "Kij bejsbolowy",
@@ -75,7 +75,7 @@ local function updateAmmoItems()
                 end
             end
             if ammoItem then
-                ammoItem.amount = currentAmmo  -- aktualizacja, bez dodawania
+                ammoItem.amount = currentAmmo 
             else
                 table.insert(inventory, {id = item.id.."_ammo", weaponId = item.id, label = item.label.." Ammo", amount = currentAmmo, type = "ammo"})
             end
@@ -90,7 +90,6 @@ local function giveWeaponsFromInventory()
             local hash = GetHashKey(item.id)
             if not HasPedGotWeapon(ped, hash, false) then
                 GiveWeaponToPed(ped, hash, 0, false, true)
-                -- ustaw ammo
                 for _, a in ipairs(inventory) do
                     if a.type == "ammo" and a.weaponId == item.id then
                         SetPedAmmo(ped, hash, a.amount or 0)
@@ -174,7 +173,7 @@ RegisterNUICallback('equipWeapon', function(data, cb)
                     end
                 end
                 if ammoItem then
-                    ammoItem.amount = currentAmmo  -- aktualizacja, nie dodawanie
+                    ammoItem.amount = currentAmmo 
                 else
                     table.insert(inventory, {id = weaponId.."_ammo", weaponId = weaponId, label = item.label.." Ammo", amount = currentAmmo, type = "ammo"})
                 end
@@ -208,7 +207,6 @@ RegisterNUICallback('close', function(_, cb)
     if cb then cb('ok') end
 end)
 
--- auto-sync PED bez nadpisywania inventory
 CreateThread(function()
     while true do
         Wait(5000)
@@ -235,7 +233,6 @@ CreateThread(function()
     end
 end)
 
--- aktualizacja ammo w czasie rzeczywistym
 CreateThread(function()
     while true do
         Wait(500)
@@ -246,7 +243,6 @@ CreateThread(function()
     end
 end)
 
--- zapis inventory po śmierci PED-a
 AddEventHandler('baseevents:onPlayerDied', function()
     updateAmmoItems()
     TriggerServerEvent('inventory:saveInventory', inventory)
