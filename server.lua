@@ -3,7 +3,6 @@ local defaultInventory = {
     { id = "water", label = "Woda", amount = 3, type = "item" }
 }
 
--- Załaduj inventory gracza
 RegisterServerEvent('inventory:loadInventory')
 AddEventHandler('inventory:loadInventory', function()
     local src = source
@@ -24,7 +23,6 @@ AddEventHandler('inventory:loadInventory', function()
     end)
 end)
 
--- Zapisz inventory gracza
 RegisterServerEvent('inventory:saveInventory')
 AddEventHandler('inventory:saveInventory', function(inv)
     local src = source
@@ -40,7 +38,6 @@ AddEventHandler('inventory:saveInventory', function(inv)
     })
 end)
 
--- Synchronizacja broni z PED-em
 RegisterServerEvent('inventory:syncPedWeapons')
 AddEventHandler('inventory:syncPedWeapons', function(weapons)
     local src = source
