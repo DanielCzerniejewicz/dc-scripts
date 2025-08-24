@@ -1,0 +1,62 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: transparent;
+}
+
+/* Powiadomienie */
+#pingNotification {
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    min-width: 260px;
+    max-width: 400px;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    font-size: 16px;
+    border-radius: 14px;
+    overflow: hidden;
+    display: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+
+    /* animacja obramówki */
+    border: 2px solid transparent;
+    background-image: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
+    background-size: 300% 3px;
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+    animation: borderFlow 3s linear infinite;
+}
+
+/* animacja płynącej obramówki */
+@keyframes borderFlow {
+    0% { background-position: 0% 100%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* efekt wejścia i wyjścia */
+.show {
+    display: block;
+    animation: fadeIn 0.4s ease-out forwards;
+}
+.hide {
+    animation: fadeOut 0.4s ease-in forwards;
+}
+
+/* animacja fade in/out */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(100%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateX(0); }
+    to { opacity: 0; transform: translateX(100%); }
+}
