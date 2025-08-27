@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    identifier VARCHAR(255) NOT NULL UNIQUE,
+    discord_name VARCHAR(255)
+);
