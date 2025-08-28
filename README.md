@@ -1,5 +1,4 @@
-# DC-Blip Script
-<br>
+# DC-Blip Script <br>
 ## Usage : <br>
 /addblip [sprite] [color] [scale] [name]
 ### Description:
