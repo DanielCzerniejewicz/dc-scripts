@@ -1,7 +1,7 @@
-# Avalibe Scripts
-## No Dependency:
-[dc-inventory](https://github.com/DanielCzerniejewicz/dc-scripts/tree/dc-inventory) - Simple Inventory <br>
-[dc-notification](https://github.com/DanielCzerniejewicz/dc-scripts/tree/dc-notification) - Simple Notification System
-## Dependency
-[dc-giveitem](https://github.com/DanielCzerniejewicz/dc-scripts/tree/dc-giveitem) - Simple Giveitem command
-
+# DC-Blip Script
+<br>
+## Usage : <br>
+/addblip [sprite] [color] [scale] [name]
+### Description:
+You must create database before start! 
+Then you can simply create the blips <br> and remove them from database.
